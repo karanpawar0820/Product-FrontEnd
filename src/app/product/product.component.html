@@ -1,0 +1,54 @@
+<div class="product-container">
+            <h1>Product Details</h1>
+            <button mat-raised-button color="primary" (click)="openDialog()">Add Product</button>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- ProductId Column -->
+        <ng-container matColumnDef="ProductId">
+            <th mat-header-cell *matHeaderCellDef> ProductId </th>
+            <td mat-cell *matCellDef="let element"> {{element.productid}} </td>
+        </ng-container>
+
+        <!-- ProductCategory Column -->
+        <ng-container matColumnDef="ProductCategory">
+            <th mat-header-cell *matHeaderCellDef> Product Category </th>
+            <td mat-cell *matCellDef="let element"> {{element.productcategory}} </td>
+        </ng-container>
+
+        <!-- ProductName Column -->
+        <ng-container matColumnDef="ProductName">
+            <th mat-header-cell *matHeaderCellDef> Product Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.productname}} </td>
+        </ng-container>
+
+        <!-- ProductDescription Column -->
+        <ng-container matColumnDef="ProductDescription">
+            <th mat-header-cell *matHeaderCellDef> Product Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.productdescription}} </td>
+        </ng-container>
+
+        <!-- Unit Column -->
+        <ng-container matColumnDef="Unit">
+            <th mat-header-cell *matHeaderCellDef> Unit </th>
+            <td mat-cell *matCellDef="let element"> {{element.unit}} </td>
+        </ng-container>
+
+        <!-- Delete Column -->
+        <ng-container matColumnDef="Delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element">
+                <span style="cursor: pointer; color: red;" class="material-symbols-outlined" (click)="deleteProduct(element.productid)">
+                    delete
+                </span>
+            </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>

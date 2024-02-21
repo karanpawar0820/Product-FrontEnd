@@ -1,0 +1,18 @@
+<div class="product-add-edit-container">
+    <h1>Product Add</h1>
+    <form>
+        <mat-form-field class="form-group" appearance="outline">
+            <input matInput placeholder="Product Category" class="form-control" name="productcategory" [(ngModel)]="productcategory">
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="outline">
+            <input matInput placeholder="Product Name" class="form-control" name="productname" [(ngModel)]="productname">
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="outline">
+            <input matInput placeholder="Product Description" class="form-control" name="productdescription" [(ngModel)]="productdescription">
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="outline">
+            <input matInput placeholder="Unit" class="form-control" name="unit" [(ngModel)]="unit">
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" (click)="addProduct()">Save</button>
+    </form>
+</div>

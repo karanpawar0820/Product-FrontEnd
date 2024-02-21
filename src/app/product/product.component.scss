@@ -1,0 +1,37 @@
+ .product-container {
+     height: 80%;
+     width: calc(100vw - 20px);
+     overflow-x: hidden;
+
+     h1 {
+        margin-left: 20px;
+        padding: 10px;
+         color: rgb(0, 26, 255);
+         font-weight: bolder;
+     }
+
+     table,
+     td,
+     th {
+         border: 1px solid black;
+
+     }
+
+     table {
+         margin: 25px;
+         width: fit-content;
+     }
+
+     th {
+         background-color: yellow;
+         //  text-align: left;
+     }
+
+     button {
+        margin-left: 30px;
+     }
+
+
+ }
+
+ 

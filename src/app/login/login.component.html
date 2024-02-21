@@ -1,0 +1,12 @@
+<div class="login-container">
+  <h1>Login</h1>
+  <form (ngSubmit)="doLogin()">
+    <mat-form-field class="form-group" appearance="outline">
+      <input matInput placeholder="Email" class="form-control" name="email" [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field class="form-group" appearance="outline">
+      <input matInput placeholder="Password" class="form-control" name="password" [(ngModel)]="password">
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Login</button>
+  </form>
+</div>

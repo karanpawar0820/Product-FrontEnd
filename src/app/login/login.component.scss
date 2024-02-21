@@ -1,0 +1,24 @@
+    .login-container {
+        height: 320px;
+        width: 250px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 75px;
+        width: 20%;
+        padding: 10px;
+        overflow: hidden;
+
+        .form-group {
+            margin: 1rem;
+        }
+
+        button {
+            margin-left: 10rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #66BB55;
+            text-align: center;
+        }
+    }
