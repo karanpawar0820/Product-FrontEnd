@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './services/product.service';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ProductAddEditComponent } from './productAddEdit/product-add-edit.component';
 
 export interface ProductElement {
@@ -21,7 +21,7 @@ export class ProductComponent implements OnInit {
   constructor(
     private productService: ProductService,
     public dialog: MatDialog
-    ) {
+  ) {
 
   }
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class ProductComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(ProductAddEditComponent, {
       width: '600px',
-      height:'400px',
+      height: '400px',
     });
 
     dialogRef.afterClosed().subscribe(result => {

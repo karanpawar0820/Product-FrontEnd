@@ -1,4 +1,4 @@
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA,MatDialogRef } from '@angular/material/dialog';
 import { Component, Inject } from "@angular/core";
 import { ProductElement } from '../product.component';
 import { ProductService } from '../services/product.service';
@@ -17,7 +17,8 @@ export class ProductAddEditComponent {
 
     constructor(@Inject(MAT_DIALOG_DATA)
     public product: ProductElement,
-        private productService: ProductService
+        private productService: ProductService,
+        public dialogRef: MatDialogRef<ProductAddEditComponent>
     ) { }
 
     addProduct() {
@@ -26,9 +27,12 @@ export class ProductAddEditComponent {
             productname: this.productname,
             productdescription: this.productdescription,
             unit: this.unit
-        }
 
+        }
+        console.log("in add product function");
         this.productService.addProducts(product).subscribe(res => {
+            console.log("dialog closed");
+            this.dialogRef.close();
 
         })
     }
